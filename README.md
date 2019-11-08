@@ -45,6 +45,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
       A primary key is a table column in a database that serves a special purpose. Each table needs a primary key because it ensures row-level accessibility. A primary key is used to ensure data in the specific column is unique.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
+      Foreign key
 
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
 
