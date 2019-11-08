@@ -5,27 +5,9 @@ module.exports = {
   getProjectById,
   addProjects,
   getProjects,
-  getTaskById,
-  addTasks,
-  getTasks
+ 
 };
 
-function getTaskById(id) {
-  return db("tasks")
-    .where({ id })
-    .first();
-}
-
-//get tasks
-function getTasks() {
-  return db("tasks");
-}
-
-//add tasks
-async function addTasks(task) {
-  const [id] = await db("tasks").insert(task);
-  return getTaskById(id);
-}
 
 //get project by id
 function getProjectById(id) {
