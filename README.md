@@ -42,6 +42,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
       A relational database is a set of formally described tables from which data can be accessed or reassembled in many different ways without having to reorganize the database tables while SQL is the language used to interact with the system.
 
 * [ ] Why do tables need a `primary key`?
+      A primary key is a table column in a database that serves a special purpose. Each table needs a primary key because it ensures row-level accessibility. A primary key is used to ensure data in the specific column is unique.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
