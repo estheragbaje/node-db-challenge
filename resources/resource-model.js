@@ -16,13 +16,13 @@ function getResourceById(id) {
     .first();
 }
 
-//add projects
+//add resources
 async function addResources(resource) {
   const [id] = await db("resources").insert(resource);
   return getResourceById(id);
 }
 
-//get projects
+//get resources
 function getResources() {
   return db("resources");
 }

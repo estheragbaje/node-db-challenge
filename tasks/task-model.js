@@ -4,7 +4,9 @@ const db = require("../data/db-config");
 module.exports = {
   getTaskById,
   addTasks,
-  getTasks
+  getTasks,
+  update,
+  remove
 };
 
 function getTaskById(id) {
@@ -22,4 +24,16 @@ function getTasks() {
 async function addTasks(task) {
   const [id] = await db("tasks").insert(task);
   return getTaskById(id);
+}
+
+function update(changes, id) {
+  return db("tasks")
+    .where({ id })
+    .update(changes);
+}
+
+function remove(id) {
+  return db(" tasks")
+    .where({ id })
+    .del();
 }

@@ -45,4 +45,42 @@ router.post("/", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+    const { id } = req.params;
+    const changes = req.body;
+  
+    Resources.getTaskById(id)
+      .then(task => {
+        if (task) {
+          Tasks.update(changes, id).then(updatedtask => {
+            res.json(updatedtask);
+          });
+        } else {
+          res
+            .status(404)
+            .json({ message: "Could not find task with given id" });
+        }
+      })
+      .catch(err => {
+        res.status(500).json({ message: "Failed to update task" });
+      });
+  });
+  
+  router.delete("/:id", (req, res) => {
+    const { id } = req.params;
+  
+    Tasks.remove(id)
+      .then(deleted => {
+        if (deleted) {
+          res.json({ removed: deleted });
+        } else {
+          res
+            .status(404)
+            .json({ message: "Could not find task with given id" });
+        }
+      })
+      .catch(err => {
+        res.status(500).json({ message: "Failed to delete task" });
+      });
+
 module.exports = router;
