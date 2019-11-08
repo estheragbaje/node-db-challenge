@@ -7,8 +7,8 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   Projects.getProjects()
-    .then(recipes => {
-      res.json(recipes);
+    .then(projects => {
+      res.json(projects);
     })
     .catch(error => {
       res.status(500).json({
@@ -28,5 +28,7 @@ router.post("/", (req, res) => {
       res.status(500).json({ message: "Failed to create new project" });
     });
 });
+
+
 
 module.exports = router;

@@ -2,9 +2,6 @@ const knex = require("knex");
 const db = require("../data/db-config");
 
 module.exports = {
-  getResourceById,
-  addResources,
-  getResources,
   getProjectById,
   addProjects,
   getProjects,
@@ -13,12 +10,6 @@ module.exports = {
   getTasks
 };
 
-// insert into tasks
-// (taks_desc, notes, completed, project_id)
-// values
-// ("get hotel venue", "book hotel for musicians", 1, 3)
-
-//get tasks by id
 function getTaskById(id) {
   return db("tasks")
     .where({ id })
@@ -54,20 +45,4 @@ function getProjects() {
   return db("projects");
 }
 
-//get resource by id
-function getResourceById(id) {
-  return db("resources")
-    .where({ id })
-    .first();
-}
 
-//add projects
-async function addResources(resource) {
-  const [id] = await db("resources").insert(resource);
-  return getResourceById(id);
-}
-
-//get projects
-function getResources() {
-  return db("resources");
-}
