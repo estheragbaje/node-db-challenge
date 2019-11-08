@@ -39,12 +39,16 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
+      A relational database is a set of formally described tables from which data can be accessed or reassembled in many different ways without having to reorganize the database tables while SQL is the language used to interact with the system.
 
-- [ ] Why do tables need a `primary key`?
+* [ ] Why do tables need a `primary key`?
+      A primary key is a table column in a database that serves a special purpose. Each table needs a primary key because it ensures row-level accessibility. A primary key is used to ensure data in the specific column is unique.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
+      Foreign key
 
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+      We need to break the many-to-many relationship into two one to many relationships by using a third table, called a JOIN table. Each record in a join table includes a match field that contains the value of the primary of the two tables it joins. (In the join table, these match fields are foreign keys.) These foreign key fields are populated with data as records in the join table are created from either table it joins.
 
 ## Minimum Viable Product
 
