@@ -39,8 +39,9 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
+      A relational database is a set of formally described tables from which data can be accessed or reassembled in many different ways without having to reorganize the database tables while SQL is the language used to interact with the system.
 
-- [ ] Why do tables need a `primary key`?
+* [ ] Why do tables need a `primary key`?
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
