@@ -48,6 +48,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
       Foreign key
 
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+      We need to break the many-to-many relationship into two one to many relationships by using a third table, called a JOIN table. Each record in a join table includes a match field that contains the value of the primary of the two tables it joins. (In the join table, these match fields are foreign keys.) These foreign key fields are populated with data as records in the join table are created from either table it joins.
 
 ## Minimum Viable Product
 
