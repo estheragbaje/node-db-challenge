@@ -4,7 +4,9 @@ const db = require("../data/db-config");
 module.exports = {
   getResourceById,
   addResources,
-  getResources
+  getResources,
+  update,
+  remove
 };
 
 //get resource by id
@@ -23,4 +25,16 @@ async function addResources(resource) {
 //get projects
 function getResources() {
   return db("resources");
+}
+
+function update(changes, id) {
+  return db("resources")
+    .where({ id })
+    .update(changes);
+}
+
+function remove(id) {
+  return db(" resources")
+    .where({ id })
+    .del();
 }
