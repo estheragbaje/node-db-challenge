@@ -17,6 +17,24 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+
+  Resources.getResourceById(id)
+    .then(resource => {
+      if (resource) {
+        res.json(resource);
+      } else {
+        res
+          .status(404)
+          .json({ message: "Could not find resource with given id." });
+      }
+    })
+    .catch(err => {
+      res.status(500).json({ message: "Failed to get resource" });
+    });
+});
+
 router.post("/", (req, res) => {
   const resourceData = req.body;
 
